@@ -12,31 +12,29 @@ let reactionTimer = null;
 let lastInteraction = Date.now();
 
 const zoneReactions = {
-  water: ["quick drink", "water break", "back to business"],
-  bed: ["checking the nest", "settling in", "nest inspection complete"],
-  wheel: ["wheel shift started", "getting some miles in", "on the clock"]
+  water: ["sip sip", "water break!"],
+  bed: ["i'm so cozy", "zzz"],
+  wheel: ["*deep focus*", "getting some miles in"]
 };
 
 const snackReactions = {
-  worm: ["mealworm accepted", "excellent payment", "good snack"],
-  strawberry: ["strawberry approved", "sweet snack", "worth the trip"],
-  seed: ["seed secured", "saving this one", "solid choice"],
-  cake: ["special occasion?", "cake accepted", "unexpected bonus"]
+  worm: ["more protein", "*stuffs cheek*", "thanks"],
+  strawberry: ["thanks!", "yum"],
+  seed: ["thanks", "*stuffs cheek*", "cool"],
+  cake: ["sugar rush!", "wow!", "yum!"]
 };
 
 const nightReactions = [
   "night shift",
-  "back to nocturnal business",
-  "perfect wheel weather",
+  "party time!",
   "lights out, work begins"
 ];
 
 const idleLines = [
-  "reviewing today's notes",
-  "between shifts",
-  "working on a tiny side project",
-  "studying... probably",
-  "on break from an unspecified job"
+  "hi",
+  "huh?",
+  "where's my snack?",
+  "sup"
 ];
 
 const ratLines = {
@@ -44,13 +42,18 @@ const ratLines = {
     "what's over there?",
     "i'm just looking",
     "have you checked behind this?",
-    "i could climb that"
+    "i could climb that",
+    "squeak!",
+    "squeaaak!"
   ],
   pepper: [
     "is that food?",
     "i'll stay here, thanks",
     "do you have snacks?",
-    "this tissue would improve the nest"
+    "this tissue would improve the nest",
+    "cola, what's that noise?",
+    "squeak!",
+    "squeak squeak!"
   ]
 };
 
