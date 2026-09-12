@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Album</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐹</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pet-album.css">
+</head>
+<body class="page-fade">
+  <div class="album-nav">
+    <a href="butters-domain.html">←︎ Butters' Domain</a>
+    <a href="index.html">main page ↗︎</a>
+  </div>
+
+  <main class="album">
+    <header class="album-header">
+      <p>little archive ✦</p>
+      <h1>Butters, Pepper + Cola</h1>
+      <span>photos, favorites, and small facts</span>
+    </header>
+
+    <section class="pet-section" id="butters">
+      <div class="pet-heading">
+        <div>
+          <p class="eyebrow">butters</p>
+          <h2>hamster employee of the month</h2>
+        </div>
+        <span>🐹</span>
+      </div>
+
+      <div class="photo-grid">
+        <div class="album-photo large"><img src="images/butters-photo.jpg" alt="Butters" onerror="this.style.display='none';this.parentElement.classList.add('empty')"><span>butters-photo.jpg</span></div>
+        <div class="album-photo"><img src="images/butters-2.jpg" alt="Butters" onerror="this.style.display='none';this.parentElement.classList.add('empty')"><span>butters-2.jpg</span></div>
+        <div class="album-photo"><img src="images/butters-3.jpg" alt="Butters" onerror="this.style.display='none';this.parentElement.classList.add('empty')"><span>butters-3.jpg</span></div>
+        <div class="album-photo"><img src="images/butters-4.jpg" alt="Butters" onerror="this.style.display='none';this.parentElement.classList.add('empty')"><span>butters-4.jpg</span></div>
+      </div>
+
+      <div class="facts-card">
+        <h3>fun facts</h3>
+        <ul>
+          <li>Adopted March 30, 2025.</li>
+          <li>Male Syrian hamster.</li>
+          <li>Loves running on his wheel.</li>
+          <li>Will complete puzzles if snacks are involved.</li>
+          <li>Takes his cozy nest very seriously.</li>
+          <li>Has an unexplained number of tiny side jobs.</li>
+          <li>Occasionally studies alongside Cindy.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="pet-section" id="rats">
+      <div class="pet-heading">
+        <div>
+          <p class="eyebrow">pepper + cola</p>
+          <h2>the soda sisters</h2>
+        </div>
+        <span>🐭🐭</span>
+      </div>
+
+      <div class="rat-columns">
+        <article class="rat-profile">
+          <div class="album-photo portrait"><img src="images/pepper-photo.jpg" alt="Pepper" onerror="this.style.display='none';this.parentElement.classList.add('empty')"><span>pepper-photo.jpg</span></div>
+          <h3>Pepper</h3>
+          <p>Shyer, very food motivated, and an enthusiastic nest builder.</p>
+        </article>
+
+        <article class="rat-profile">
+          <div class="album-photo portrait"><img src="images/cola-photo.jpg" alt="Cola" onerror="this.style.display='none';this.parentElement.classList.add('empty')"><span>cola-photo.jpg</span></div>
+          <h3>Cola</h3>
+          <p>Curious, explorative, and usually the first one checking out something new.</p>
+        </article>
+      </div>
+
+      <div class="facts-card">
+        <h3>shared hobbies</h3>
+        <ul>
+          <li>Trying new foods.</li>
+          <li>Engineering their home with cardboard and tissue.</li>
+          <li>Climbing anything remotely climbable.</li>
+          <li>Investigating changes immediately—especially Cola.</li>
+          <li>Turning nesting supplies into architecture—especially Pepper.</li>
+        </ul>
+      </div>
+
+      <div class="photo-grid rat-gallery">
+        <div class="album-photo"><img src="images/rats-1.jpg" alt="Pepper and Cola" onerror="this.style.display='none';this.parentElement.classList.add('empty')"><span>rats-1.jpg</span></div>
+        <div class="album-photo"><img src="images/rats-2.jpg" alt="Pepper and Cola" onerror="this.style.display='none';this.parentElement.classList.add('empty')"><span>rats-2.jpg</span></div>
+        <div class="album-photo"><img src="images/rats-3.jpg" alt="Pepper and Cola" onerror="this.style.display='none';this.parentElement.classList.add('empty')"><span>rats-3.jpg</span></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('a[href]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        document.body.classList.add('page-leaving');
+        setTimeout(() => { window.location.href = link.href; }, 280);
+      });
+    });
+  </script>
+</body>
+</html>

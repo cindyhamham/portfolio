@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Butters' Domain</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐹</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="butters-domain.css">
+</head>
+<body class="page-fade">
+  <div class="domain-dots domain-dots-left" aria-hidden="true"></div>
+  <div class="domain-dots domain-dots-right" aria-hidden="true"></div>
+
+  <div class="domain-nav">
+    <a class="nav-pill" href="index.html">←︎ main page</a>
+    <a class="nav-pill" href="pet-album.html">pet album ↗︎</a>
+  </div>
+
+  <main class="domain">
+    <header class="hanging-title">
+      <span class="cord cord-left"></span>
+      <span class="cord cord-right"></span>
+      <div class="sign-board">
+        <p>you found it ✦</p>
+        <h1>Butters' Domain</h1>
+        <small>with occasional appearances by Pepper + Cola</small>
+      </div>
+    </header>
+
+    <p class="domain-subtitle">drag Butters around, or bring him a snack</p>
+
+    <div class="scene-wrap">
+      <section class="hamster-scene" id="hamster-scene">
+        <div class="scene-night" aria-hidden="true"></div>
+
+        <button class="domain-stars" id="domain-stars" type="button" aria-label="Toggle night mode">
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+        </button>
+
+        <div class="sky-cloud c1"></div>
+        <div class="sky-cloud c2"></div>
+
+        <div class="hill hill-far"></div>
+        <div class="hill hill-mid-a"></div>
+        <div class="hill hill-mid-b"></div>
+        <div class="hill hill-near-a"></div>
+        <div class="hill hill-near-b"></div>
+
+        <div class="wheel zone" id="wheel-zone" data-zone="wheel" aria-label="Hamster wheel">
+          <div class="wheel-frame"></div>
+          <div class="wheel-feet"></div>
+          <div class="wheel-outer">
+            <div class="wheel-track"></div>
+            <div class="wheel-hub"></div>
+          </div>
+        </div>
+
+        <div class="food-bowl-area">
+          <div class="food-bowl">
+            <div class="bowl-back"></div>
+            <button class="snack worm" type="button" data-snack="worm" aria-label="Move the worm">🪱</button>
+            <button class="snack strawberry" type="button" data-snack="strawberry" aria-label="Move the strawberry">🍓</button>
+            <button class="snack cake" type="button" data-snack="cake" aria-label="Move the cake">🍰</button>
+            <button class="snack seed" type="button" data-snack="seed" aria-label="Move the seed"><span class="seed-shape"></span></button>
+            <div class="bowl-front"></div>
+          </div>
+        </div>
+
+        <div class="bed zone" id="bed-zone" data-zone="bed" aria-label="Butters' bed">
+          <div class="bed-headboard"></div>
+          <div class="bed-frame"></div>
+          <div class="bed-mattress"></div>
+          <div class="bed-pillow"></div>
+          <div class="bed-blanket"></div>
+          <div class="bed-footboard"></div>
+        </div>
+
+        <div class="water-station zone" id="water-zone" data-zone="water" aria-label="Hamster water bottle">
+          <div class="wall-mount"></div>
+          <div class="water-bottle">
+            <div class="water-cap"></div>
+            <div class="water-glass"><div class="water-level"></div></div>
+            <div class="water-nozzle"></div>
+          </div>
+        </div>
+
+        <div class="butters-zone" id="butters-zone">
+          <button class="butters" id="butters" type="button" aria-label="Drag Butters">
+            <span class="butters-emoji">🐹</span>
+          </button>
+        </div>
+
+        <div class="reaction-layer" id="reaction-layer" aria-live="polite"></div>
+
+        <div class="grass-strip"></div>
+        <div class="flower f1">✿</div>
+        <div class="flower f2">✿</div>
+        <div class="flower f3">✿</div>
+        <div class="flower f4">✿</div>
+        <div class="flower f5">✿</div>
+        <div class="flower f6">✿</div>
+      </section>
+
+      <div class="rat-peeker cola" tabindex="0" data-rat="cola" aria-label="Cola is peeking">
+        <span class="rat-face">🐭</span>
+        <span class="rat-line"></span>
+      </div>
+
+      <div class="rat-peeker pepper" tabindex="0" data-rat="pepper" aria-label="Pepper is peeking">
+        <span class="rat-face">🐭</span>
+        <span class="rat-line"></span>
+      </div>
+    </div>
+
+    <p class="secret-note">drag Butters to the wheel, bottle, or bed. snacks in the bowl can be moved too.</p>
+
+    <section class="pet-notes">
+      <div class="pet-card butters-card">
+        <div class="pet-photo">
+          <img src="images/butters-photo.jpg" alt="Butters" onerror="this.style.display='none'; this.parentElement.classList.add('empty-photo')">
+          <span>add a Butters photo</span>
+        </div>
+        <div>
+          <p class="pet-label">butters</p>
+          <h2>the tiny employee</h2>
+          <p>Butters is a male Syrian hamster adopted on March 30, 2025. He loves running on his wheel, completing puzzles for snacks, and sleeping in his cozy nest.</p>
+          <p class="pet-joke">Current résumé: student, puzzle tester, night-shift wheel operator, and various unexplained odd jobs.</p><a class="photo-link" href="pet-album.html#butters">view more photos →︎</a>
+        </div>
+      </div>
+
+      <div class="pet-card rat-card">
+        <div class="rat-photos">
+          <div class="rat-photo-item">
+            <div class="pet-photo small">
+              <img src="images/pepper-photo.jpg" alt="Pepper" onerror="this.style.display='none'; this.parentElement.classList.add('empty-photo')">
+              <span>add photo</span>
+            </div>
+            <strong>pepper</strong>
+          </div>
+          <div class="rat-photo-item">
+            <div class="pet-photo small">
+              <img src="images/cola-photo.jpg" alt="Cola" onerror="this.style.display='none'; this.parentElement.classList.add('empty-photo')">
+              <span>add photo</span>
+            </div>
+            <strong>cola</strong>
+          </div>
+        </div>
+        <div>
+          <p class="pet-label">pepper + cola</p>
+          <h2>the soda sisters</h2>
+          <p>Pepper and Cola are spunky female rats named after sodas. They love trying new foods, engineering their home from cardboard and tissue, and climbing.</p>
+          <p class="pet-joke">Cola is the explorer. Pepper is the shy nest architect who can usually be bribed with food.</p><a class="photo-link" href="pet-album.html#rats">view more photos →︎</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="butters-domain.js"></script>
+</body>
+</html>
