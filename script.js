@@ -80,7 +80,7 @@ if (emailCopy) {
 const doorSqueak = document.querySelector("#door-squeak");
 
 if (doorSqueak) {
-  const squeaks = ["squeak squeak", "squeak?", "*rustle*", "tiny footsteps"];
+  const squeaks = ["squeak squeak", "squeak squak!", "*rustle*", "tiny footsteps", "scritch scratch"];
   let squeakIndex = 0;
 
   function showDoorClue() {
@@ -93,8 +93,22 @@ if (doorSqueak) {
     }, 2200);
   }
 
-  setTimeout(showDoorClue, 4500);
-  setInterval(showDoorClue, 13000);
+  setTimeout(showDoorClue, 3500);
+  setInterval(showDoorClue, 10000);
+}
+
+// Flip the portrait to reveal a few small facts.
+const profilePolaroid = document.querySelector("#profile-polaroid");
+
+if (profilePolaroid) {
+  profilePolaroid.addEventListener("click", () => {
+    const isFlipped = profilePolaroid.classList.toggle("is-flipped");
+    profilePolaroid.setAttribute("aria-pressed", String(isFlipped));
+    profilePolaroid.setAttribute(
+      "aria-label",
+      isFlipped ? "Flip Cindy's fun facts back to her portrait" : "Flip Cindy's portrait to see fun facts"
+    );
+  });
 }
 
 // Fade out when entering Butters' Domain.

@@ -67,8 +67,8 @@ The featured project pages now keep the titles smaller and put more visual empha
 
 ## Featured project order
 
-1. Elderly Population & Community Access
+1. Navigation Center Site Selection
 2. Wolverine Habitat Suitability
-3. Navigation Center Site Selection
+3. Butters' Guide to Eugene
 
 The first project uses `images/elderly-population-map.png` and `images/elderly-population-preview.jpg`.

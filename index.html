@@ -82,14 +82,27 @@
         <i class="clip-neck"></i>
         <i class="clip-bar"></i>
       </span>
-      <div class="polaroid">
-        <div class="photo-placeholder">
-          <img src="images/profile.jpg" alt="Cindy Tang"
-               onerror="this.style.display='none'; this.parentElement.classList.add('empty-photo');">
-          <span>add your photo here</span>
-        </div>
-        <p>cindy · eugene, or</p>
-      </div>
+      <button class="polaroid" id="profile-polaroid" type="button" aria-pressed="false" aria-label="Flip Cindy's portrait to see fun facts">
+        <span class="polaroid-inner">
+          <span class="polaroid-face polaroid-front">
+            <span class="photo-placeholder">
+              <img src="images/profile.jpg" alt="Cindy Tang"
+                   onerror="this.style.display='none'; this.parentElement.classList.add('empty-photo');">
+              <span>add your photo here</span>
+            </span>
+            <span class="polaroid-caption">cindy · eugene, or</span>
+          </span>
+          <span class="polaroid-face polaroid-back">
+            <span class="polaroid-back-label">fun facts</span>
+            <span class="fun-facts">
+              <span>🛼 occasional roller skater</span>
+              <span>🎭 Former theater kid</span>
+              <span>🎨 I got into graphic design before I got into maps</span>
+            </span>
+            <span class="polaroid-hint">tap to flip back</span>
+          </span>
+        </span>
+      </button>
     </div>
 
     <div class="secret-door-row">
@@ -119,13 +132,13 @@
 <section class="section" id="projects">
   <div class="section-heading"><span>02</span><h2>projects</h2></div>
   <div class="project-grid">
-    <a class="project-card" href="project-elderly-population.html">
+    <a class="project-card" href="project-navigation-center.html">
       <div class="project-preview project-image-preview">
-        <img src="images/elderly-population-preview.jpg" alt="Preview of elderly population concentration map">
+        <img src="images/navigation-center-preview.jpg" alt="Preview of navigation center site selection map">
       </div>
-      <div class="project-meta"><span>01 · GIS / DEMOGRAPHICS</span><span>↗︎</span></div>
-      <h3>Elderly Population &amp; Community Access</h3>
-      <p class="project-description">Identified Eugene neighborhoods with higher concentrations of adults 65+ and compared them with nearby transit, parks, and community resources.</p>
+      <div class="project-meta"><span>01 · GIS / PLANNING</span><span>↗︎</span></div>
+      <h3>Navigation Center Site Selection</h3>
+      <p class="project-description">Used ArcGIS Pro to identify potential sites for a Navigation Center in Eugene-Springfield, narrowing public parcels based on size, land status, transit access, nearby services, and surrounding community factors.</p>
     </a>
 
     <a class="project-card" href="project-wolverine.html">
@@ -137,13 +150,15 @@
       <p class="project-description">Used raster-based suitability and visibility analysis to explore potential high-quality wolverine denning habitat.</p>
     </a>
 
-    <a class="project-card" href="project-navigation-center.html">
+    <a class="project-card" href="project-butters-guide.html" aria-label="View Butters’ Guide to Eugene">
       <div class="project-preview project-image-preview">
-        <img src="images/navigation-center-preview.jpg" alt="Preview of navigation center site selection map">
+        <video autoplay loop muted playsinline preload="auto" aria-label="Animated cover for Butters’ Guide to Eugene">
+          <source src="images/butters-guide-cover.mp4" type="video/mp4">
+        </video>
       </div>
-      <div class="project-meta"><span>03 · GIS / PLANNING</span><span>↗︎</span></div>
-      <h3>Navigation Center Site Selection</h3>
-      <p class="project-description">Narrowed public parcels using site constraints, access, and surrounding planning factors.</p>
+      <div class="project-meta"><span>03 · IN PROGRESS</span><span>✦</span></div>
+      <h3>Butters’ Guide to Eugene</h3>
+      <p class="project-description">A work-in-progress guide to Eugene, sharing local places and small discoveries through Butters’ perspective.</p>
     </a>
   </div>
   <div class="center-link"><a href="projects.html">view all projects →︎</a></div>
