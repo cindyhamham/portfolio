@@ -80,7 +80,7 @@ if (emailCopy) {
 const doorSqueak = document.querySelector("#door-squeak");
 
 if (doorSqueak) {
-  const squeaks = ["squeak squeak", "squeak squak!", "*rustle*", "tiny footsteps", "scritch scratch"];
+  const squeaks = ["squeak squeak", "squeak sqeuak!", "*rustle*", "tiny footsteps", "scritch scratch"];
   let squeakIndex = 0;
 
   function showDoorClue() {
