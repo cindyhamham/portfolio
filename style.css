@@ -1178,6 +1178,10 @@ footer a {
   display: block;
   object-fit: cover;
 }
+.project-layout-cover img {
+  object-fit: contain;
+  background: #fff;
+}
 
 .project-image-preview video {
   width: 100%;

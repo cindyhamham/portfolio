@@ -41,7 +41,6 @@ const ratLines = {
   cola: [
     "what's over there?",
     "i'm just looking",
-    "have you checked behind this?",
     "i could climb that",
     "squeak!",
     "squeaaak!"
@@ -59,7 +58,7 @@ const ratLines = {
 
 function randomFrom(list){return list[Math.floor(Math.random()*list.length)]}
 
-function showReaction(text){
+function showReaction(text, anchor=buttersZone){
   lastInteraction = Date.now();
   reactionLayer.innerHTML="";
   const pop=document.createElement("div");
@@ -67,18 +66,29 @@ function showReaction(text){
   pop.textContent=text;
 
   const sceneRect=scene.getBoundingClientRect();
-  const buttersRect=buttersZone.getBoundingClientRect();
-  let x=buttersRect.left-sceneRect.left+buttersRect.width*.72;
-  let y=buttersRect.top-sceneRect.top-24;
+  const anchorRect=anchor.getBoundingClientRect();
+  let x=anchorRect.left-sceneRect.left+anchorRect.width*(anchor===buttersZone ? .72 : .5);
+  let y=anchorRect.top-sceneRect.top-(anchor===buttersZone?24:34);
 
-  x=Math.min(x,sceneRect.width-190);
-  y=Math.max(y,8);
+  x=Math.max(8,Math.min(x,sceneRect.width-190));
+  y=Math.max(8,Math.min(y,sceneRect.height-42));
   pop.style.left=`${x}px`;
   pop.style.top=`${y}px`;
   reactionLayer.appendChild(pop);
 
   clearTimeout(reactionTimer);
   reactionTimer=setTimeout(()=>{reactionLayer.innerHTML=""},5000);
+}
+
+function feedButters(snack){
+  const type=snack.dataset.snack;
+  showReaction(randomFrom(snackReactions[type]));
+  buttersZone.classList.remove("snack-happy");
+  void buttersZone.offsetWidth;
+  buttersZone.classList.add("snack-happy");
+  snack.style.opacity="0";
+  snack.style.pointerEvents="none";
+  setTimeout(()=>snack.remove(),170);
 }
 
 function centerOf(el){
@@ -178,14 +188,7 @@ snacks.forEach((snack)=>{
     snack.classList.remove("dragging");
     snack.releasePointerCapture(event.pointerId);
     if(insideZone(snack,buttersZone)){
-      const type=snack.dataset.snack;
-      showReaction(randomFrom(snackReactions[type]));
-      buttersZone.classList.remove("snack-happy");
-      void buttersZone.offsetWidth;
-      buttersZone.classList.add("snack-happy");
-      snack.style.opacity="0";
-      snack.style.pointerEvents="none";
-      setTimeout(()=>snack.remove(),170);
+      feedButters(snack);
     }
   });
 });
