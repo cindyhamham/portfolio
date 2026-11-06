@@ -1382,43 +1382,9 @@ footer a {
   }
 }
 
-/* PDF project card and full map preview */
-.project-pdf-preview { overflow: hidden; background: #f5efec; }
-.project-pdf-preview iframe { width: 100%; height: 205px; display: block; border: 0; pointer-events: none; }
+/* Full Census map preview */
 .census-pdf-viewer { min-height: 65vh; }
 .census-pdf-viewer iframe { width: 100%; min-height: 65vh; border: 0; display: block; }
 @media (max-width: 700px) {
-  .project-pdf-preview iframe { height: 180px; }
   .census-pdf-viewer, .census-pdf-viewer iframe { min-height: 55vh; }
-}
-
-/* Crop the embedded Census PDF viewer so the cover shows only the map. */
-.project-pdf-preview {
-  height: 205px;
-  min-height: 205px;
-  background: #fff;
-}
-.project-pdf-preview iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 128%;
-  height: 128%;
-  transform: translate(-48%, -50%);
-  border: 0;
-  pointer-events: none;
-}
-.projects-page .project-pdf-preview {
-  height: 145px;
-  min-height: 145px;
-}
-@media (max-width: 700px) {
-  .project-pdf-preview {
-    height: 180px;
-    min-height: 180px;
-  }
-  .projects-page .project-pdf-preview {
-    height: 145px;
-    min-height: 145px;
-  }
 }
