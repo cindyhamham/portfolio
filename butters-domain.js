@@ -21,7 +21,7 @@ const snackReactions = {
   worm: ["more protein", "*stuffs cheek*", "thanks"],
   strawberry: ["thanks!", "yum"],
   seed: ["thanks", "*stuffs cheek*", "cool"],
-  cake: ["sugar rush!", "wow!", "yum!"]
+  cake: ["cookie time!", "wow!", "yum!"]
 };
 
 const nightReactions = [
